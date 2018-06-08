@@ -22,6 +22,20 @@ class Main3Activity : AppCompatActivity() {
             i.setData(Uri.parse("tel:"+et.text.toString()))
             i.setAction(Intent.ACTION_DIAL)
             startActivity(i)
+        }else if(v.id==R.id.back){
+            var i=Intent(this,MainActivity::class.java)
+            startActivity(i)
+        }else if(v.id==R.id.whatsapp){
+            var i=packageManager.getLaunchIntentForPackage("com.bsb.hike")
+            if(i!=null) {
+                startActivity(i)
+            }else{
+                i=Intent()
+                i.setData(Uri.parse("market://details?id=com.bsb.hike"))
+                i.setAction(Intent.ACTION_VIEW)
+                startActivity(i)
+            }
+
         }
     }
 }
