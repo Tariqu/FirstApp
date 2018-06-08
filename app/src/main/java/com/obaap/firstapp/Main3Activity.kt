@@ -25,7 +25,7 @@ class Main3Activity : AppCompatActivity() {
         }else if(v.id==R.id.back){
             var i=Intent(this,MainActivity::class.java)
             startActivity(i)
-        }else if(v.id==R.id.whatsapp){
+        }else if(v.id==R.id.hike){
             var i=packageManager.getLaunchIntentForPackage("com.bsb.hike")
             if(i!=null) {
                 startActivity(i)
@@ -36,6 +36,16 @@ class Main3Activity : AppCompatActivity() {
                 startActivity(i)
             }
 
+        }else if(v.id==R.id.whatsapp){
+            var i=packageManager.getLaunchIntentForPackage("com.whatsapp")
+            if(i!=null) {
+                startActivity(i)
+            }else{
+                i=Intent()
+                i.setData(Uri.parse("market://details?id=com.whatsapp"))
+                i.setAction(Intent.ACTION_VIEW)
+                startActivity(i)
+            }
         }
     }
 }

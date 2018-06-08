@@ -31,8 +31,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hike"
+        android:id="@+id/hike"
+        android:onClick="click"
+        android:layout_gravity="center"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/whatsapp"
         android:onClick="click"
+        android:text="WhatsApp"
         android:layout_gravity="center"/>
 
 
