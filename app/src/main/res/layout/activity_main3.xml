@@ -1,16 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/grad_bg">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:orientation="vertical">
     <EditText
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColorHint="@color/white"
         android:hint="Enter Mobile Number"
+        android:textColor="@color/white"
+        android:textSize="15sp"
         android:inputType="phone"
-        android:paddingBottom="20sp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/et_bg"
         android:layout_gravity="center"
         android:id="@+id/phone"/>
     <Button
@@ -18,29 +32,59 @@
         android:layout_height="wrap_content"
         android:id="@+id/call"
         android:onClick="click"
-        android:text="call now"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:layout_marginTop="5dp"
+        android:text="Call Now"
+        android:visibility="gone"
+        android:background="@drawable/et_bg"
         android:layout_gravity="center"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         android:text="Back"
         android:id="@+id/back"
         android:onClick="click"
+        android:textColor="@color/white"
+        android:background="@drawable/et_bg"
+        android:visibility="gone"
         android:layout_gravity="center"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hike"
         android:id="@+id/hike"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/white"
         android:onClick="click"
+        android:background="@drawable/et_bg"
+        android:visibility="gone"
         android:layout_gravity="center"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/whatsapp"
         android:onClick="click"
+        android:layout_marginTop="5dp"
         android:text="WhatsApp"
+        android:textColor="@color/white"
+        android:background="@drawable/et_bg"
+        android:visibility="gone"
         android:layout_gravity="center"/>
 
+        <Button
+            android:id="@+id/gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/et_bg"
+            android:onClick="click"
+            android:visibility="gone"
+            android:text="Gallery"
+            android:textColor="@color/white" />
 
+
+</LinearLayout>
 </LinearLayout>

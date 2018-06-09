@@ -4,15 +4,42 @@ import android.content.Intent
 import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.view.View
+import android.widget.Button
 import android.widget.EditText
 import kotlinx.android.synthetic.main.activity_main3.view.*
 
 class Main3Activity : AppCompatActivity() {
-
+    var gallery:Button?=null
+    var what:Button?=null
+    var hike:Button?=null
+    var back:Button?=null
+    var call:Button?=null
+    var handler=Handler()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main3)
+        gallery=findViewById(R.id.gallery)
+        what=findViewById(R.id.whatsapp)
+        call=findViewById(R.id.call)
+        back=findViewById(R.id.back)
+        hike=findViewById(R.id.hike)
+        handler.postDelayed(Runnable {
+            gallery!!.visibility=View.VISIBLE
+        },2000)
+        handler.postDelayed(Runnable {
+            what!!.visibility=View.VISIBLE
+        },3000)
+        handler.postDelayed(Runnable {
+            hike!!.visibility=View.VISIBLE
+        },4000)
+        handler.postDelayed(Runnable {
+            back!!.visibility=View.VISIBLE
+        },5000)
+        handler.postDelayed(Runnable {
+            call!!.visibility=View.VISIBLE
+        },6000)
     }
     fun click(v:View){
         var et:EditText=findViewById(R.id.phone)
@@ -46,6 +73,8 @@ class Main3Activity : AppCompatActivity() {
                 i.setAction(Intent.ACTION_VIEW)
                 startActivity(i)
             }
+        }else if(v.id==R.id.gallery){
+
         }
     }
 }
