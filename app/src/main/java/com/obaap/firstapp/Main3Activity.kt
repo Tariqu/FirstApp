@@ -16,15 +16,18 @@ class Main3Activity : AppCompatActivity() {
     var hike:Button?=null
     var back:Button?=null
     var call:Button?=null
+    var et:EditText?=null
     var handler=Handler()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main3)
+        var i=intent
         gallery=findViewById(R.id.gallery)
         what=findViewById(R.id.whatsapp)
         call=findViewById(R.id.call)
         back=findViewById(R.id.back)
         hike=findViewById(R.id.hike)
+        back!!.text=i.getStringExtra("user")
         handler.postDelayed(Runnable {
             gallery!!.visibility=View.VISIBLE
         },2000)
@@ -42,16 +45,15 @@ class Main3Activity : AppCompatActivity() {
         },6000)
     }
     fun click(v:View){
-        var et:EditText=findViewById(R.id.phone)
+        et=findViewById(R.id.phone)
         if(v.id==R.id.call){
           var i=Intent()
 
-            i.setData(Uri.parse("tel:"+et.text.toString()))
+            i.setData(Uri.parse("tel:"+et!!.text.toString()))
             i.setAction(Intent.ACTION_DIAL)
             startActivity(i)
         }else if(v.id==R.id.back){
-            var i=Intent(this,MainActivity::class.java)
-            startActivity(i)
+            finish()
         }else if(v.id==R.id.hike){
             var i=packageManager.getLaunchIntentForPackage("com.bsb.hike")
             if(i!=null) {

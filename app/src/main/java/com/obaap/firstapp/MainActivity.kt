@@ -7,6 +7,7 @@ import android.widget.RelativeLayout
 import android.view.View;
 import android.os.Handler;
 import android.widget.Button
+import android.widget.EditText
 import kotlinx.android.synthetic.main.activity_main.*
 import android.widget.Toast
 
@@ -31,6 +32,7 @@ class MainActivity : AppCompatActivity() {
         b1.setOnClickListener {
             Toast.makeText(this@MainActivity, "You clicked me.", Toast.LENGTH_SHORT).show()
             val intent= Intent(this@MainActivity,Main3Activity::class.java)
+            intent.putExtra("user",et1.text.toString())
             startActivity(intent)
         }
     }
