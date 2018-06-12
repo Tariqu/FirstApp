@@ -20,7 +20,7 @@
             android:name=".Main2Activity"
             android:label="@string/title_activity_main2"
             android:theme="@style/AppTheme" />
-        <activity android:name=".Main3Activity"></activity>
+        <activity android:name=".Main3Activity" />
     </application>
 
 </manifest>

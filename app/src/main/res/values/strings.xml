@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">FirstApp</string>
     <string name="title_activity_main2">Main2Activity</string>
+    <string name="ecn">Enter Country Name :</string>
+    <string-array name="countries">
+        <item>Australia</item>
+        <item>Brazil</item>
+        <item>Canada</item>
+        <item>India</item>
+        <item>Indonasia</item>
+        <item>Ireland</item>
+    </string-array>
 </resources>

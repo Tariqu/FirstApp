@@ -74,7 +74,7 @@
         android:layout_gravity="center"/>
 
         <Button
-            android:id="@+id/gallery"
+            android:id="@+id/nxtPage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -82,8 +82,9 @@
             android:background="@drawable/et_bg"
             android:onClick="click"
             android:visibility="gone"
-            android:text="Gallery"
+            android:text="next Page"
             android:textColor="@color/white" />
+
 
 
 </LinearLayout>

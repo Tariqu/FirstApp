@@ -16,20 +16,21 @@ class Main3Activity : AppCompatActivity() {
     var hike:Button?=null
     var back:Button?=null
     var call:Button?=null
+    var nxtPage:Button?=null
     var et:EditText?=null
     var handler=Handler()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main3)
         var i=intent
-        gallery=findViewById(R.id.gallery)
+        nxtPage=findViewById(R.id.nxtPage)
         what=findViewById(R.id.whatsapp)
         call=findViewById(R.id.call)
         back=findViewById(R.id.back)
         hike=findViewById(R.id.hike)
         back!!.text=i.getStringExtra("user")
         handler.postDelayed(Runnable {
-            gallery!!.visibility=View.VISIBLE
+            nxtPage!!.visibility=View.VISIBLE
         },2000)
         handler.postDelayed(Runnable {
             what!!.visibility=View.VISIBLE
@@ -75,7 +76,9 @@ class Main3Activity : AppCompatActivity() {
                 i.setAction(Intent.ACTION_VIEW)
                 startActivity(i)
             }
-        }else if(v.id==R.id.gallery){
+        }else if(v.id==R.id.nxtPage){
+            var int1=Intent(this@Main3Activity,Main2Activity::class.java)
+            startActivity(int1)
 
         }
     }
